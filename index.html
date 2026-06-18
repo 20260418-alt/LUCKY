@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네잎클로버</title>
+    <style>
+        body {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+    <p id="message">포기하고싶을때 보는 문구</p>
+    <button onclick="showRandomMessage()">눌러서 확인하기</button>
 
+    <script>
+        function showRandomMessage() {
+            const messages = [
+                "달라지지 않는다면 다음에도 똑같은 결과를 받아야한다.",
+                "견디자 존나 해내자 넌 할 수 있다",
+                "모든게 끝났을 때 허무하지 않도록, 후회하지 않도록, 미련남지 않도록",
+                "너만 힘든거 아니야",
+                "자식은 부모가 투자한 가장 큰 주식이다"
+            ];
+            document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+        }
+    </script>
+</body>
+</html>
